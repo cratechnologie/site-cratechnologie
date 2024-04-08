@@ -16,6 +16,8 @@ export const environment = {
     'gestionInfrastructure': 'gestion-infrastructure',
     'maintenanceMateriels': 'maintenance-materiels',
     'domotiqueEtSecuriteBatiment': 'securite',
+    'infogerance': 'infogerance',
+    'parcInformatique': 'parc',
     'fournitureMateriels': 'fourniture-materiels',
     'autresServices': 'autres-services',
     nousJoindre: 'nous-joindre',

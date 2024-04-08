@@ -36,6 +36,8 @@ import { DetailServiceRequestComponent } from './admin/service-request/detail-se
 import { environment } from 'src/environment';
 import { AutresServicesComponent } from './pages/autres-services/autres-services.component';
 import { GestionInfrastructureComponent } from './pages/gestion-infrastructure/gestion-infrastructure.component';
+import { InfogeranceComponent } from './pages/infogerance/infogerance.component';
+import { ParcInformatiqueComponent } from './pages/parc-informatique/parc-informatique.component';
 
 const routes: Routes = [
   { path: environment.routes.home, component: HomeComponent },
@@ -51,6 +53,8 @@ const routes: Routes = [
   { path: environment.routes.gestionInfrastructure, component: GestionInfrastructureComponent },
   { path: environment.routes.maintenanceMateriels, component: MaintenanceMaterielsComponent },
   { path: environment.routes.domotiqueEtSecuriteBatiment, component: DomotiqueEtSecuriteComponent },
+  { path: environment.routes.infogerance, component: InfogeranceComponent },
+  { path: environment.routes.parcInformatique, component: ParcInformatiqueComponent },
   { path: environment.routes.fournitureMateriels, component: FournitureMaterielsComponent },
   { path: environment.routes.autresServices, component: AutresServicesComponent },
 ];

@@ -53,6 +53,8 @@ import { AutresServicesComponent } from './pages/autres-services/autres-services
 import { CandidatureComponent } from './form/candidature/candidature.component';
 import { BeforeFooterComponent } from './includes/before-footer/before-footer.component';
 import { GestionInfrastructureComponent } from './pages/gestion-infrastructure/gestion-infrastructure.component';
+import { InfogeranceComponent } from './pages/infogerance/infogerance.component';
+import { ParcInformatiqueComponent } from './pages/parc-informatique/parc-informatique.component';
 
 @NgModule({
   declarations: [
@@ -104,6 +106,8 @@ import { GestionInfrastructureComponent } from './pages/gestion-infrastructure/g
     CandidatureComponent,
     BeforeFooterComponent,
     GestionInfrastructureComponent,
+    InfogeranceComponent,
+    ParcInformatiqueComponent,
   ],
   imports: [
     BrowserModule,
