@@ -1,0 +1,52 @@
+<h1>Détail</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card" *ngIf="serviceRequest">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th>Expéditeur</th>
+                                    <th>{{serviceRequest.name}}</th>
+                                </tr>
+                                <tr>
+                                    <th>Email</th>
+                                    <th>{{serviceRequest.email}}</th>
+                                </tr>
+                                <tr>
+                                    <th>Téléphone</th>
+                                    <th>{{serviceRequest.primaryPhone}}</th>
+                                </tr>
+                                <tr>
+                                    <th>Adresse du client</th>
+                                    <th>{{serviceRequest.clientAddress}}</th>
+                                </tr>
+                                <tr>
+                                    <th>Adresse du chantier</th>
+                                    <th>{{serviceRequest.buildingAddress}}</th>
+                                </tr>
+                                <tr>
+                                    <th>Service Demander</th>
+                                    <th>
+                                        {{serviceRequest.service}}
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-outline-info" (click)="goBack()">Retour à la liste</button>
+                <button class="btn btn-outline-primary"
+                    (click)="goToEditServiceRequest(serviceRequest.id)">Editer</button>
+                <button class="btn btn-outline-danger"
+                    (click)="goToDeleteServiceRequest(serviceRequest.id)">Supprimer</button>
+            </div>
+        </div>
+    </div>
+</div>

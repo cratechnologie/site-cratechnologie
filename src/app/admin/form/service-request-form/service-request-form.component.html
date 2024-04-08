@@ -1,0 +1,70 @@
+<form (ngSubmit)="onSubmit()" class="was-validated" #pageForm="ngForm">
+    <div class="mb-3 mt-3">
+      <label for="name" class="form-label">NOM :</label>
+      <input type="text" class="form-control" required id="name" name="name" [(ngModel)]="serviceRequest.name" #name="ngModel">
+      <div class="invalid-feedback">Veuillez saisir un nom valide.</div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="email" class="form-label">COURRIEL :</label>
+      <input type="email" class="form-control" required id="email" name="email" [(ngModel)]="serviceRequest.email" #email="ngModel">
+      <div class="invalid-feedback">Veuillez saisir une adresse e-mail valide.</div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="primaryPhone" class="form-label">TÉLÉPHONE PRINCIPAL : </label>
+      <input type="tel" class="form-control" id="primaryPhone" name="primaryPhone" [(ngModel)]="serviceRequest.primaryPhone" #primaryPhone="ngModel">
+    </div>
+  
+    <div class="mb-3">
+      <label for="cellPhone" class="form-label">TÉLÉPHONE CELLULAIRE :</label>
+      <input type="tel" class="form-control" id="cellPhone" name="cellPhone" [(ngModel)]="serviceRequest.cellPhone" #cellPhone="ngModel">
+    </div>
+  
+    <div class="mb-3">
+      <label for="clientAddress" class="form-label">ADRESSE DU CLIENT :</label>
+      <input type="text" class="form-control" id="clientAddress" name="clientAddress" [(ngModel)]="serviceRequest.clientAddress" #clientAddress="ngModel">
+    </div>
+  
+    <div class="mb-3">
+      <label for="buildingAddress" class="form-label">ADRESSE DU BÂTIMENT À INSPECTER  :</label>
+      <textarea class="form-control" id="buildingAddress" name="buildingAddress" [(ngModel)]="serviceRequest.buildingAddress" #buildingAddress="ngModel" cols="30" rows="10"></textarea>
+      </div>
+  
+    <div class="mb-3">
+      <label for="service" class="form-label">LE SERVICE QUE VOUS DÉSIREZ UNE SOUMISSION?  :</label>
+      <input type="text" class="form-control">
+      <select  class="form-select" id="service" name="service" [(ngModel)]="serviceRequest.service" #service="ngModel">
+        <option value="1254"> Expertise structure </option>
+        <option value="3334"> Estimation </option>
+        <option value="98424e31-0510-4426-bcaa-ab3cadd83a90"> Inspection des fondations </option>
+        <option value="aa-dronetb2"> Drone TB2 </option>
+        <option value="analyse_efficacite_energetique"> Analyse efficacité énergétique </option>
+        <option value="analyse_qualite_de_l_air"> Qualité de l'air </option>
+        <option value="avancement"> Inspection avancement des travaux </option>
+        <option value="ebax-infiltrometrie"> Infiltrometrie </option>
+        <option value="expertise_legale"> Expertise légale </option>
+        <option value="infiltro"> Infiltrométrie </option>
+        <option value="j-star-B310-s"> J-Star B310 </option>
+        <option value="kkkkkooo"> Inspection préréception </option>
+        <option value="rapport_d_etat_d_immeuble"> Rapport d'état d'immeuble </option>
+        <option value="resolution_de_probleme"> Résolution de problème </option>
+        <option value="simulation"> Simulation énergétique </option>
+        <option value="thermo"> Thermographie </option>
+        <option value="VRC"> Vérification VRC </option>
+        <!---->
+      </select>
+    </div>
+  
+    <div class="mb-3">
+      <label for="referralSource" class="form-label">VOUS AVEZ ENTENDU PARLER DE NOUS PAR : </label>
+      <select class="form-select" id="referralSource" name="referralSource" [(ngModel)]="serviceRequest.referralSource" #referralSource="ngModel">
+        <option value="Google">Google</option>
+        <option value="Facebook">Facebook</option>
+        <option value="Twitter">Twitter</option>
+      </select>
+    </div>
+  
+    <button type="submit" class="btn btn-primary" [disabled]="!pageForm.form.valid">Envoyer</button>
+  </form>
+  

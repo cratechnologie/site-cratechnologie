@@ -1,0 +1,142 @@
+.dropdown-toggle::after{
+    display: none ;
+}
+
+.app-header .header-brand{
+    display:  initial ;
+}
+.centerlogo-horizontal .app-header .header-brand{
+    display:  none !important ;
+}
+
+.app-header .top-header
+{
+  background-color : #07322C !important;
+  height : 122px ;
+}
+
+.header-brand-img
+{
+  height: 115px ;
+  width: 344px ;
+}
+
+.animated{
+    animation-name:fadeInUp;
+  /*  margin-top: 60px; */
+}
+
+@media (max-width: 767.98px) and (min-width: 576px){
+    .header .form-inline .btn {
+        position: absolute !important;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0,10%,0) !important;
+    }
+    100% {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+
+::ng-deep{
+    .search-show::before{
+        display: none;
+    }
+
+    @media only screen and (max-width: 991px){
+        body.active .header.top-header{
+            left: 240px !important;
+            transition: all 0.25s ease-in-out;
+        }
+    }
+    .header.top-header{
+        transition: all 0.25s ease-in-out;
+    }
+}
+
+
+@media (min-width: 768px){
+.app-header {
+    padding-right: 0px !important;
+}
+}
+
+::ng-deep{
+    .dropdown-menu.animated{
+        z-index: 10001 !important;
+    }
+
+    .dropdown-item:hover{
+     }
+}
+
+::ng-deep {
+  .dropdown-menu-arrow.dropdown-menu-end:after, .dropdown-menu-arrow.dropdown-menu-start:after
+{
+
+}
+
+.dropdown-menu{
+  top:30px !important; ; right :120px !important; ;width:300px !important;
+}
+.profile-dropdown.show .dropdown-menu {
+    left: -250px !important;
+}
+
+/*
+style="top:30px; right:20px;width:200px; " */
+
+
+
+
+}
+
+::ng-deep{
+
+ .menu-header-elements-trigger{
+   color:#FFF !important;
+   height: 40px;
+   padding:7px;
+   margin-top:30px;
+   border: 1px solid transparent;
+   font-size: 20px;
+ }
+
+ .menu-header-elements-trigger:hover{
+  }
+
+  @media screen and (max-width: 1100px) {
+      .menu-header-elements
+      {
+        display:none  !important;
+      }
+      .menu-header-elements-trigger{
+        display: block   !important;
+      }
+      .header-responsibe-menu{
+        display:none   !important;
+      }
+      .header-responsibe-menu.active{
+        display:block   !important;
+      }
+  }
+  @media screen and (min-width: 1100px) {
+
+    .menu-header-elements-trigger{
+      display:none   !important;
+
+    }
+    .header-responsibe-menu{
+      display:none   !important;
+    }
+    .header-responsibe-menu.active{
+      display:none   !important;
+    }
+  }
+}

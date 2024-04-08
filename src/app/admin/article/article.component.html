@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col">
+        <button class="btn btn-primary" routerLink="/admin/article/add">Ajouter</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table mb-4">
+            <thead>
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Titre</th>
+                    <th scope="col">Catégorie</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let article of articleList">
+                    <th scope="row">{{article.id}}</th>
+                    <td>{{article.title}}</td>
+                    <td>{{article.category.title}}</td>
+                    <td><img [src]="getImageUrl(article.image)" width="75" class="img-thumbnail" alt="{{ article.title }} Image"></td>
+                    <td>
+                        <button type="submit" class="btn btn-warning" (click)="goToDetail(article.id)">Détail</button>
+                        <button type="submit" class="btn btn-primary ms-1" (click)="goToEditArticle(article.id)">Modifier</button>
+                        <button type="submit" class="btn btn-danger" (click)="goToDeleteArticle(article.id)">Supprimer</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

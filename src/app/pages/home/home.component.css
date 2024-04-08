@@ -1,0 +1,12 @@
+.awb-carousel .awb-swiper,
+.awb-swiper-carousel,
+.swiper-initialized,
+.swiper-horizontal,
+.swiper-pointer-events,
+.swiper-autoheight {
+    min-height: 185px;
+}
+
+.flip-box-back, .fusion-flip-box, .flip-box-front {
+    min-height: 350px !important;
+}

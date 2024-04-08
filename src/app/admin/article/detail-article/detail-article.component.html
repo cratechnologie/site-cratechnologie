@@ -1,0 +1,47 @@
+<h1>Détail</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card" *ngIf="article">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4"><img [src]="getImageUrl(article.image)" class="img-thumbnail" alt="{{ article.title }} Image"></div>
+                    <div class="col-md-8">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th>Titre</th>
+                                    <th>{{article.title}}</th>
+                                </tr>
+                                <tr>
+                                    <th>Catégorie</th>
+                                    <th>{{article.category.title}}</th>
+                                </tr>
+                                <tr>
+                                    <th>Titre de la bannière</th>
+                                    <th>{{article.bannerTitle}}</th>
+                                </tr>
+                                <tr>
+                                    <th>Description de la bannière</th>
+                                    <th>{{article.bannerDescription}}</th>
+                                </tr>
+                                <tr>
+                                    <th>Contenu</th>
+                                    <th>
+                                        {{article.content}}
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-outline-info" (click)="goBack()">Retour à la liste</button>
+                <button class="btn btn-outline-primary" (click)="goToEditArticle(article.id)">Editer</button>
+                <button class="btn btn-outline-danger" (click)="goToDeleteArticle(article.id)">Supprimer</button>
+            </div>
+        </div>
+    </div>
+</div>

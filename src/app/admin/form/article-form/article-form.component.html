@@ -1,0 +1,48 @@
+<form (ngSubmit)="onSubmit()" enctype="multipart/form-data" class="was-validated" #articleForm="ngForm">
+    <div class="mb-3 mt-3">
+        <label for="title" class="form-label">Titre:</label>
+        <input type="text" class="form-control" required id="title" name="title" [(ngModel)]="article.title"
+            #title="ngModel">
+        <div class="invalid-feedback">Veuillez saisir un titre valide.</div>
+    </div>
+
+    <div class="mb-3">
+        <label for="bannerTitle" class="form-label">Titre de la bannière:</label>
+        <input type="text" class="form-control" id="bannerTitle" name="bannerTitle" [(ngModel)]="article.bannerTitle"
+            #bannerTitle="ngModel">
+    </div>
+
+    <div class="mb-3">
+        <label for="bannerDescription" class="form-label">Description de la bannière:</label>
+        <input type="text" class="form-control" id="bannerDescription" name="bannerDescription"
+            [(ngModel)]="article.bannerDescription" #bannerDescription="ngModel">
+    </div>
+
+    <div class="mb-3">
+        <label for="content" class="form-label">Contenu:</label>
+        <textarea class="form-control" id="content" name="content" [(ngModel)]="article.content"
+            #content="ngModel"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label for="image" class="form-label">Image:</label>
+        <input type="file" class="form-control" id="image" (change)="onImageSelected($event)" #imageInput>
+        <ng-container *ngIf="article.image; else showFallback">
+            <img [src]="getImageUrl(article.image)" width="75" alt="Image Actuelle">
+        </ng-container>
+        <ng-template #showFallback>
+            <p class="mt-2">Aucune image actuelle</p>
+        </ng-template>
+    </div>
+
+    <div class="mb-3">
+        <label for="category" class="form-label">Catégorie:</label>
+        <select class="form-select" id="category" name="category" [(ngModel)]="article.catId" #category="ngModel">
+            <option *ngFor="let category of categoryList" [value]="category.id"> <!-- Utilisez category.id -->
+                {{ category.title }}
+            </option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!articleForm.form.valid">Envoyer</button>
+</form>

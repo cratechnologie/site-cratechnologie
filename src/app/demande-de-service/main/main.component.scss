@@ -1,0 +1,121 @@
+#media-contact
+{
+   //background-image : url('../../../../assets/images/illustrations/media-contact.jpeg');
+   /* background-size: 100%  400px !important; */
+   background-size: cover ;
+   height:  400px !important;
+}
+
+
+
+.header{
+  height : 53px ;
+    background: #eaf2fa;
+    padding: 3.0pt 3.0pt 3.0pt 3.0pt;
+    text-transform: uppercase;
+}
+
+.content
+{
+  min-height: 50px;
+}
+
+.field-p-field
+{
+  margin-left:10px;
+}
+
+.-invalid-feedback
+{
+  color:#F22 !important;
+  padding: 5px !important;
+  padding-left: 15px !important;
+  font-size:0.8em !important;
+
+}
+.is-invalid
+{
+  border:1px solid #F22  !important;
+  display:block;
+}
+
+.name_line div:first-child {
+  display: inline-block !important;
+}
+
+/* Style global du formulaire */
+form {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Titres des sections */
+form h4 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-bottom: 3px;
+}
+
+/* Champs de saisie et étiquettes */
+.form-label {
+  font-weight: bold;
+  color: #555;
+}
+
+input.form-control {
+  width: 100%;
+  padding: 5px 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  height: 43px;
+}
+
+/* Champs select */
+.form-select {
+  width: 100%;
+  padding: 5px 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  height: 43px;
+}
+
+/* Bouton de soumission */
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Cases à cocher */
+.form-check-input {
+  margin-right: 5px;
+}
+
+/* Champ de texte (Message) */
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Couleur des champs requis */
+.text-danger {
+  color: #ff0000;
+}

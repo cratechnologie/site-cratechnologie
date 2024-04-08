@@ -1,0 +1,72 @@
+<form method="post" enctype="multipart/form-data" id="gform_4" action="/nous-joindre/" data-formid="4"
+    (ngSubmit)="onSubmit()" class="was-validated" #messageForm="ngForm">
+    <input type="hidden" class="gforms-pum"
+        value="{&quot;closepopup&quot;:false,&quot;closedelay&quot;:0,&quot;openpopup&quot;:false,&quot;openpopup_id&quot;:0}">
+    <div class="row">
+        <h5 class="mb-3 fw-bold text-secondary">NOM *</h5>
+        <div class="col">
+            <div class="form-outline">
+                <input type="text" id="firstName" class="form-control" required name="firstName"
+                    [(ngModel)]="msg.firstName" #firstName="ngModel" />
+                <label class="form-label" for="firstName">PRÉNOM</label>
+                <div class="invalid-feedback">Veuillez saisir un prénom valide</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-outline">
+                <input type="text" id="lastName" class="form-control" required name="lastName"
+                    [(ngModel)]="msg.lastName" #lastName="ngModel" />
+                <label class="form-label" for="lastName">NOM</label>
+                <div class="invalid-feedback">Veuillez saisir un nom valide</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <h5 class="mb-3 fw-bold text-secondary">COURRIEL *</h5>
+            <div class="form-outline">
+                <input type="email" class="form-control" required id="email" name="email" [(ngModel)]="msg.email"
+                    #email="ngModel" />
+                <div class="invalid-feedback">Veuillez saisir une adresse e-mail valide</div>
+            </div>
+        </div>
+        <div class="col">
+            <h5 class="mb-3 fw-bold text-secondary">TÉLÉPHONE *</h5>
+            <div class="form-outline">
+                <input type="tel" class="form-control" id="phone" name="phone" [(ngModel)]="msg.phone"
+                    #phone="ngModel" />
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <h5 class="mb-3 fw-bold text-secondary">MESSAGE *</h5>
+        <div class="col">
+            <div class="form-outline">
+                <textarea class="form-control" required id="message" name="message" [(ngModel)]="msg.message"
+                    #message="ngModel"></textarea>
+                <div class="invalid-feedback">Veuillez saisir un message valide</div>
+            </div>
+        </div>
+    </div>
+    <div class="gform_footer top_label">
+        <button type="submit" id="gform_submit_button_4" class="gform_button button btn btn-primary"
+            [disabled]="!messageForm.form.valid"
+            onclick='if(window["gf_submitting_4"]){return false;}  window["gf_submitting_4"]=true;'>
+            Envoyer
+        </button>
+        <input type="hidden" class="gform_hidden" name="is_submit_4" value="1">
+        <input type="hidden" class="gform_hidden" name="gform_submit" value="4">
+        <input type="hidden" class="gform_hidden" name="gform_unique_id" value="">
+        <input type="hidden" class="gform_hidden" name="state_4"
+            value="WyJbXSIsIjNlMzU1MTAxYjM1NjI6MjRmNDRjMGMyN2IwNWI0NjhkIl0=">
+        <input type="hidden" class="gform_hidden" name="gform_target_page_number_4" id="gform_target_page_number_4"
+            value="0">
+        <input type="hidden" class="gform_hidden" name="gform_source_page_number_4" id="gform_source_page_number_4"
+            value="1">
+        <input type="hidden" name="gform_field_values" value="">
+    </div>
+</form>
+<div class="alert" [ngClass]="{'alert-success': isSuccess, 'alert-danger': !isSuccess}" *ngIf="showAlert">
+    {{ alertMessage }}
+</div>

@@ -1,0 +1,31 @@
+<form (ngSubmit)="onSubmit()" class="was-validated" #messageForm="ngForm">
+    <div class="mb-3 mt-3">
+        <label for="firstName" class="form-label">Prénom:</label>
+        <input type="text" class="form-control" required id="firstName" name="firstName" [(ngModel)]="msg.firstName"
+            #firstName="ngModel">
+        <div class="invalid-feedback">Veuillez saisir un prénom valide</div>
+    </div>
+    <div class="mb-3">
+        <label for="lastName" class="form-label">Nom:</label>
+        <input type="text" class="form-control" required id="lastName" name="lastName" [(ngModel)]="msg.lastName"
+            #lastName="ngModel">
+        <div class="invalid-feedback">Veuillez saisir un nom valide</div>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" required id="email" name="email" [(ngModel)]="msg.email"
+            #email="ngModel">
+        <div class="invalid-feedback">Veuillez saisir une adresse e-mail valide</div>
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label">Téléphone:</label>
+        <input type="tel" class="form-control" id="phone" name="phone" [(ngModel)]="msg.phone" #phone="ngModel">
+    </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">Message:</label>
+        <textarea class="form-control" required id="message" name="message" [(ngModel)]="msg.message"
+            #message="ngModel"></textarea>
+        <div class="invalid-feedback">Veuillez saisir un message valide</div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!messageForm.form.valid">Envoyer</button>
+</form>

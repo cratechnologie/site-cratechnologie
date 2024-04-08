@@ -1,0 +1,22 @@
+.tab-content .active {
+  opacity: 1;
+}
+
+.nav-tabs .nav-link {
+  padding: 0px !important;
+}
+
+.nav-tabs .nav-link h4 {
+  padding: 10px 35px;
+}
+
+.nav-tabs .active {
+  background-color: #378bb0;
+  color: #fff;
+}
+
+.nav-tabs .active h4 {
+  background-color: #378bb0;
+  color: #fff;
+}
+

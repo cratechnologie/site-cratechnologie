@@ -1,0 +1,42 @@
+<h1>Détail</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card" *ngIf="message">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th>Expéditeur</th>
+                                    <th>{{message.firstName}} {{message.firstName}}</th>
+                                </tr>
+                                <tr>
+                                    <th>Email</th>
+                                    <th>{{message.email}}</th>
+                                </tr>
+                                <tr>
+                                    <th>Téléphone</th>
+                                    <th>{{message.phone}}</th>
+                                </tr>
+                                <tr>
+                                    <th>Message</th>
+                                    <th>
+                                        {{message.message}}
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-outline-info" (click)="goBack()">Retour à la liste</button>
+                <button class="btn btn-outline-primary" (click)="goToEditMessage(message.id)">Editer</button>
+                <button class="btn btn-outline-danger" (click)="goToDeleteMessage(message.id)">Supprimer</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<form (ngSubmit)="submitForm()" #form="ngForm" enctype="multipart/form-data">
+    <div class="row">
+        <h5 class="mb-3 fw-bold text-secondary">NOM</h5>
+        <div class="col">
+            <div class="form-outline">
+                <input type="text" id="firstname" class="form-control" name="firstname" ngModel required
+                    [(ngModel)]="candidature.firstname" />
+                <label class="form-label" for="firstname">PRÉNOM</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-outline">
+                <input type="text" id="name" class="form-control" name="name" ngModel required
+                    [(ngModel)]="candidature.name" />
+                <label class="form-label" for="name">NOM</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h5 class="mb-3 fw-bold text-secondary">COURRIEL</h5>
+            <div class="form-outline">
+                <input type="email" id="email" class="form-control" name="email" ngModel required
+                    [(ngModel)]="candidature.email" />
+            </div>
+        </div>
+        <div class="col">
+            <h5 class="mb-3 fw-bold text-secondary">TÉLÉPHONE</h5>
+            <div class="form-outline">
+                <input type="tel" id="phone" class="form-control" name="phone" ngModel required
+                    [(ngModel)]="candidature.phone" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h5 class="mb-3 fw-bold text-secondary">Je postule pour le poste :</h5>
+        <div class="col">
+            <div class="form-outline">
+                <select id="job" class="form-control" name="job" ngModel required [(ngModel)]="candidature.job">
+                    <option value="---" disabled>---</option>
+                    <option value="Inspecteur ou inspectrice préachat">Inspecteur ou inspectrice préachat</option>
+                    <option value="Ingénieur en structure pour expertise">Ingénieur en structure pour expertise</option>
+                    <option value="Estimateur">Estimateur</option>
+                    <option value="Représentant des ventes">Représentant des ventes</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row align-items-end">
+        <div class="col">
+            <h5 class="mb-3 fw-bold text-secondary">Télécharger votre CV</h5>
+            <div class="form-outline">
+                <input class="form-control form-control-sm" id="formFileSm" type="file"
+                (change)="handleCVUpload($event)" accept=".pdf, .docx" required />
+                <input type="hidden" name="MAX_FILE_SIZE" value="2097152" />
+            </div>
+            <p class="text-muted mb-0">Taille max. des fichiers : 2 MB.</p>
+        </div>
+    </div>
+    <button class="btn btn-danger text-white mt-4 me-2" type="submit" [disabled]="!form.valid">Envoyer</button>
+</form>
+<div class="alert" [ngClass]="{'alert-success': isSuccess, 'alert-danger': !isSuccess}" *ngIf="showAlert">
+    {{ alertCandidature }}
+</div>

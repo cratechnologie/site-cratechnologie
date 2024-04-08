@@ -1,0 +1,4 @@
+<div *ngIf="msg" class="mt-4 p-5 rounded">
+    <h1>Editer le message de {{msg.firstName}} {{msg.lastName}}</h1>
+    <app-message-form [msg]="msg"></app-message-form>
+</div>
