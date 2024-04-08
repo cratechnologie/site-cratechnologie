@@ -15,7 +15,7 @@ export const environment = {
     'reseauInformatique': 'reseau-informatique',
     'gestionInfrastructure': 'gestion-infrastructure',
     'maintenanceMateriels': 'maintenance-materiels',
-    'domotiqueEtSecuriteBatiment': 'domotique-et-securite-batiment',
+    'domotiqueEtSecuriteBatiment': 'securite',
     'fournitureMateriels': 'fourniture-materiels',
     'autresServices': 'autres-services',
     nousJoindre: 'nous-joindre',
